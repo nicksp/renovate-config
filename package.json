@@ -1,0 +1,18 @@
+{
+  "name": "@nicksp/renovate-config",
+  "author": {
+    "name": "Nick Plekhanov",
+    "url": "https://plekhanov.me/"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.18.1",
+  "scripts": {
+    "test": "renovate-config-validator ./default.json5"
+  },
+  "files": [
+    "default.json5"
+  ],
+  "dependencies": {
+    "renovate": "^41.143.1"
+  }
+}

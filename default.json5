@@ -1,0 +1,31 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":approveMajorUpdates",
+    ":semanticCommitScopeDisabled",
+    "schedule:weekly",
+    "group:allNonMajor"
+  ],
+  "labels": ["dependencies"],
+  "rangeStrategy": "bump",
+
+  // Wait well over npm's three day window for any new package as a precaution against malicious publishes
+  // https://docs.npmjs.com/policies/unpublish/#packages-published-less-than-72-hours-ago
+  "minimumReleaseAge": "7 days",
+
+  "packageRules": [
+    {
+      "description": "Use the deps:actions label for github-action manager updates.",
+      "addLabels": ["deps:actions"],
+      "matchManagers": ["github-actions"]
+    },
+    {
+      "description": "Use the deps:npm label for npm manager packages.",
+      "addLabels": ["deps:npm"],
+      "matchManagers": ["npm"]
+    }
+  ],
+  "ignoreDeps": ["node"],
+  "postUpdateOptions": ["pnpmDedupe"]
+}
