@@ -24,6 +24,12 @@
       "description": "Use the deps:npm label for npm manager packages.",
       "addLabels": ["deps:npm"],
       "matchManagers": ["npm"]
+    },
+    {
+      "description": "Automerge non-major updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
     }
   ],
   "ignoreDeps": ["node"],
