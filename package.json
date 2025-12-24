@@ -5,7 +5,7 @@
     "url": "https://plekhanov.me/"
   },
   "license": "MIT",
-  "packageManager": "pnpm@10.25.0",
+  "packageManager": "pnpm@10.26.0",
   "scripts": {
     "test": "renovate-config-validator ./default.json5"
   },
@@ -13,6 +13,6 @@
     "default.json5"
   ],
   "dependencies": {
-    "renovate": "^42.52.8"
+    "renovate": "^42.58.3"
   }
 }
