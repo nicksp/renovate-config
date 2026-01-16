@@ -13,6 +13,6 @@
     "default.json5"
   ],
   "dependencies": {
-    "renovate": "^42.71.0"
+    "renovate": "^42.76.2"
   }
 }
